@@ -19,13 +19,15 @@ public class Transactions {
     private String description;
     private String method;
     private Date TDate;
+    private String category;
 
-    public Transactions(double amount, String type, String description, String method, Date TDate) {
+    public Transactions(double amount, String type, String description, String method, Date TDate, String category) {
         this.amount = amount;
         this.type = type;
         this.description = description;
         this.method = method;
         this.TDate = TDate;
+        this.category = category;
     }
 
     public Transactions() {
@@ -77,5 +79,13 @@ public class Transactions {
 
     public void setTDate(Date TDate) {
         this.TDate = TDate;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
