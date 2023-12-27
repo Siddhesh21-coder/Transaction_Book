@@ -12,7 +12,7 @@ public class MainActivityClickHandler {
     }
 
     public void onFABClicked(View view) {
-        Intent i = new Intent(view.getContext(),);
+        Intent i = new Intent(view.getContext(), AddNewTransaction.class);
         context.startActivity(i);
     }
 }
