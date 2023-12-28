@@ -37,6 +37,11 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="16dp"
                     app:layout_constraintEnd_toStartOf="@id/gridLayout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_margin="4dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
                     app:layout_constraintStart_toStartOf="parent">
 
                     <ImageView
@@ -46,6 +51,8 @@
                 </androidx.cardview.widget.CardView>
 
                 <GridLayout
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     android:id="@+id/gridLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -58,11 +65,12 @@
 
                     <TextView
                         android:id="@+id/textView12"
+                        android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="@{transaction.category}"
-                        android:textSize="20sp"
+                        android:textSize="24sp"
 
 
                         />
@@ -74,8 +82,8 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="@{transaction.TDate}"
-                        android:textSize="12sp"
-                        app:layout_constraintTop_toBottonof="@id/textView12"
+                        android:textSize="16sp"
+
 
                         />
 
@@ -86,7 +94,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:gravity="center"
-                    android:text="@{transaction.amount}"
+                    android:text="@{`\u20B9`+String.valueOf(transaction.amount)}"
                     android:textColor="#00FF00"
                     android:textSize="30sp"
                     app:layout_constraintBottom_toBottomOf="parent"

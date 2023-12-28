@@ -18,10 +18,10 @@ public class Transactions {
     @ColumnInfo(name="description")
     private String description;
     private String method;
-    private Date TDate;
+    private String TDate;
     private String category;
 
-    public Transactions(double amount, String type, String description, String method, Date TDate, String category) {
+    public Transactions(double amount, String type, String description, String method, String TDate, String category) {
         this.amount = amount;
         this.type = type;
         this.description = description;
@@ -73,11 +73,11 @@ public class Transactions {
         this.method = method;
     }
 
-    public Date getTDate() {
+    public String getTDate() {
         return TDate;
     }
 
-    public void setTDate(Date TDate) {
+    public void setTDate(String TDate) {
         this.TDate = TDate;
     }
 
